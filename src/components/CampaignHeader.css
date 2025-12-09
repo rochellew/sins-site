@@ -1,0 +1,52 @@
+.campaign-header {
+    /* Light background, making it look like a scroll banner */
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    padding: 2.5rem 0;
+    text-align: center;
+    /* Use a strong gold/crimson border top and bottom */
+    border-top: 5px double var(--color-accent-gold);
+    border-bottom: 5px solid var(--color-accent-crimson);
+    /* Shadow remains dark for drama */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.campaign-title {
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin: 0;
+    /* Title is Deep Red/Crimson on Cream */
+    color: var(--color-accent-crimson);
+    /* Use a subtle drop shadow for definition, not glow */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.2em;
+}
+
+.campaign-subtitle {
+    font-family: var(--font-secondary);
+    font-style: italic;
+    font-size: 1.3rem;
+    margin: 0.5rem 0 1.5rem 0;
+    color: var(--color-text-primary); /* Dark text */
+}
+
+.header-nav {
+    margin-top: 1.5rem;
+}
+
+.header-nav a {
+    color: var(--color-accent-crimson); /* Crimson links */
+    text-decoration: none;
+    margin: 0 1.8rem;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    transition:
+        color 0.3s,
+        text-shadow 0.3s;
+}
+
+.header-nav a:hover {
+    color: var(--color-accent-gold); /* Gold on hover */
+    text-shadow: 0 0 5px var(--color-border-dark);
+}

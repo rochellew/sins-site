@@ -1,0 +1,21 @@
+.campaign-footer {
+    background-color: var(--color-accent-crimson);
+    color: var(--color-background);
+    /* Cream text */
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: 3rem;
+    border-top: 5px double var(--color-accent-gold);
+}
+
+.campaign-footer p {
+    margin: 0.5rem 0;
+    font-family: var(--font-secondary);
+    font-size: 0.9rem;
+}
+
+.campaign-footer .attribution {
+    font-style: italic;
+    color: rgba(245, 245, 220, 0.7);
+    /* Slightly muted cream */
+}

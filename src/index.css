@@ -1,0 +1,98 @@
+/* src/index.css (Revised for Holy/Bright Vibe) */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Pro:wght@400;700&display=swap');
+
+:root {
+    /* Color Palette: Holy/Bright Horror */
+    --color-background: #f5f5dc; /* Cream/Bone White (New Main Background) */
+    --color-text-primary: #1a1a1a; /* Dark Ink/Near Black (New Main Text) */
+    --color-accent-crimson: #8b0000; /* Deep Red/Crimson (New Primary Accent) */
+    --color-accent-gold: #c0b283; /* Burnished Gold/Brass (Secondary Accent) */
+    --color-border-dark: #4d0000; /* Very dark red/wine for thick borders */
+
+    /* Typography */
+    --font-primary: 'Cinzel', serif; /* For ornate headings, titles */
+    --font-secondary:
+        'Crimson Pro', serif; /* For body text (Elegant and formal) */
+}
+
+/* Apply global styles */
+body {
+    margin: 0;
+    padding: 0;
+    /* Bright, holy background */
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: var(--font-secondary);
+    line-height: 1.6;
+}
+
+/* Reset/Base Styles */
+h1,
+h2,
+h3 {
+    font-family: var(--font-primary);
+    /* Titles are now the Deep Red/Crimson color */
+    color: var(--color-accent-crimson);
+    margin-top: 1.5rem;
+}
+
+a {
+    color: var(--color-accent-crimson);
+    font-weight: 700;
+}
+
+.App {
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ADD TO THE BOTTOM OF src/index.css */
+
+/* --- SHARED STATUS TAG STYLING --- */
+.status-tag {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* Use Cream/White text for high contrast on all status blocks */
+    color: var(--color-background);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* For Active characters (Deep green) */
+.status-active {
+    background-color: #376f4e;
+}
+
+/* For Deceased characters (Deep red/Crimson) */
+.status-deceased {
+    background-color: var(--color-accent-crimson);
+    opacity: 0.9;
+}
+
+/* For Neutral NPCs (Blue/Gray) */
+.status-neutral {
+    background-color: #37536f;
+}
+
+/* For Hostile NPCs (Brown/Earth) */
+.status-hostile {
+    background-color: #8b4513;
+}
+
+/* For Antagonists who are Defeated */
+.status-defeated {
+    background-color: #c0c0c0; /* Gray/Stone */
+    color: var(--color-text-primary); /* Dark text for defeated */
+    text-decoration: line-through;
+}
+
+/* For Antagonists who are Sealed/Contained */
+.status-sealed {
+    background-color: #37536f; /* Blue/Binding color (same as neutral) */
+}

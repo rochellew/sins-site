@@ -1,0 +1,32 @@
+.content-card {
+    /* Background is the main background, making it seamless */
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    padding: 2.5rem;
+    margin: 2rem 0;
+    /* Strong crimson border for emphasis */
+    border: 3px solid var(--color-accent-crimson);
+    /* Clean shadow */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.card-title {
+    font-family: var(--font-primary);
+    color: var(--color-accent-crimson); /* Deep Crimson for titles */
+    text-transform: uppercase;
+    /* Separator is Gold/Brass */
+    border-bottom: 2px solid var(--color-accent-gold);
+    padding-bottom: 0.75rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+}
+
+/* Override link styling within the card */
+.content-card a {
+    color: var(--color-accent-crimson); /* Crimson links */
+    text-decoration: none;
+    border-bottom: 1px dotted var(--color-accent-crimson);
+}

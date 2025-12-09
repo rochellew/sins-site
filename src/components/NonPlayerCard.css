@@ -1,0 +1,42 @@
+.non-player-card {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border: 2px solid var(--color-accent-gold);
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add some internal border or distinction */
+    border-left: 5px solid var(--color-accent-gold);
+}
+
+.profile-header {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--color-accent-gold);
+}
+
+.character-portrait {
+    /* Reused from CharacterProfile */
+    width: 80px;
+    /* Slightly smaller for NPCs */
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--color-accent-crimson);
+}
+
+.header-info h2 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: var(--color-accent-crimson);
+}
+
+.npc-role {
+    font-style: italic;
+    color: var(--color-text-primary);
+    margin: 0.2rem 0;
+}
