@@ -2,6 +2,7 @@ import React from 'react';
 import './NonPlayerCard.css';
 
 export interface NonPlayerCardProps {
+    id: string;
     name: string;
     role: string;
     status: 'Active' | 'Missing' | 'Deceased' | 'Neutral' | 'Hostile';

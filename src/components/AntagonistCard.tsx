@@ -3,6 +3,7 @@ import './AntagonistCard.css';
 import { FaScroll } from 'react-icons/fa';
 
 export interface AntagonistCardProps {
+    id: string;
     name: string;
     title: string;
     status: 'Active' | 'Defeated' | 'Sealed' | 'Missing';

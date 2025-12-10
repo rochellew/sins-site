@@ -2,6 +2,7 @@ import React from 'react';
 import './CharacterProfile.css';
 
 export interface CharacterProfileProps {
+    id: string;
     name: string;
     race: string;
     classRole: string;

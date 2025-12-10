@@ -1,14 +1,10 @@
 .character-profile {
-    /* Change background to the Cream color */
-    background-color: var(--color-background);
-    /* Main text is now the dark ink color */
+    background-color: var(--color-background-2);
     color: var(--color-text-primary);
     padding: 1.5rem;
     margin: 2rem 0;
-    /* Use the Gold/Brass accent for the border */
     border: 2px solid var(--color-accent-gold);
     border-radius: 6px;
-    /* Lighter shadow for the bright background */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -18,17 +14,14 @@
     align-items: center;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
-    /* Separator line is now Gold/Brass */
     border-bottom: 1px solid var(--color-accent-gold);
 }
 
 .character-portrait {
-    /* Keep size */
     width: 100px;
     height: 100px;
     object-fit: cover;
     border-radius: 50%;
-    /* Border is now Deep Crimson */
     border: 3px solid var(--color-accent-crimson);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
@@ -36,20 +29,16 @@
 .header-info h2 {
     font-size: 2rem;
     margin: 0;
-    /* Title is Deep Crimson */
     color: var(--color-accent-crimson);
 }
 
-/* --- Key Stats Styling --- */
 .key-stats {
     display: flex;
     justify-content: space-around;
-    /* Background is Gold/Brass accent */
     background-color: var(--color-accent-gold);
     padding: 0.8rem 0;
     margin: 1.5rem 0;
     border-radius: 4px;
-    /* Border is Dark Red */
     border: 1px solid var(--color-border-dark);
 }
 
@@ -59,21 +48,20 @@
 }
 
 .stat-value {
-    /* MAKE THIS LARGE AND DOMINANT (Crimson on Gold) */
     display: block;
     font-family: var(--font-primary);
-    font-size: 2.2rem; /* Increased size for dominance */
+    font-size: 2.2rem;
     font-weight: 700;
-    line-height: 1.1; /* Tighter line height to bring it closer to the label */
+    line-height: 1.1;
     color: var(--color-accent-crimson);
-    margin-bottom: 0.1rem; /* Small margin to separate from label */
+    margin-bottom: 0.1rem;
 }
 
 .stat-label {
     display: block;
-    font-size: 0.85rem; /* Slightly increased size for readability */
+    font-size: 0.85rem;
     text-transform: uppercase;
-    color: var(--color-text-primary); /* Dark Ink color */
+    color: var(--color-text-primary);
 }
 
 .profile-description h4 {

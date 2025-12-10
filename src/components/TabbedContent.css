@@ -1,31 +1,24 @@
 .tabbed-content {
     margin: 2rem 0;
-    /* Background is now the main cream color */
     background-color: var(--color-background);
-    /* Border is Deep Crimson */
     border: 1px solid var(--color-accent-crimson);
     border-radius: 4px;
-    /* Lighter shadow */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .tab-navigation {
     display: flex;
-    /* Divider line is Dark Red/Wine */
     border-bottom: 2px solid var(--color-border-dark);
     background-color: #eee;
-    /* Slightly off-white to distinguish the tab bar */
 }
 
 .tab-button {
-    /* Base button styling */
     background: none;
     border: none;
     padding: 1rem 1.5rem;
     cursor: pointer;
     font-family: var(--font-primary);
     font-size: 1.1rem;
-    /* Inactive tabs are Dark Ink color */
     color: var(--color-text-primary);
     text-transform: uppercase;
     transition:
@@ -35,26 +28,19 @@
 }
 
 .tab-button:hover:not(.active) {
-    /* Subtle hover effect */
     background-color: rgba(0, 0, 0, 0.05);
 }
 
 .tab-button.active {
-    /* Active tab styling */
     background-color: var(--color-background);
-    /* White/Cream background */
     color: var(--color-accent-crimson);
-    /* Crimson text */
     border-bottom: 3px solid var(--color-accent-crimson);
-    /* Crimson underline */
-    /* Remove the tilt effect for a cleaner look */
     transform: none;
     font-weight: 700;
 }
 
 .tab-panel {
     padding: 2rem;
-    /* No change, background is already light */
     background-color: var(--color-background);
     border-radius: 0 0 4px 4px;
 }

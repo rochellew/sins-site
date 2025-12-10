@@ -1,14 +1,15 @@
 .antagonist-card {
-background-color: var(--color-background);
-color: var(--color-text-primary);
-padding: 1.5rem;
-margin: 2rem 0;
-/* Heavy Crimson border for Antagonists */
-border: 3px solid var(--color-accent-crimson);
-border-radius: 6px;
-box-shadow: 0 4px 10px rgba(139, 0, 0, 0.4);
-/* Red glow shadow */
-border-right: 8px solid var(--color-border-dark);
+    background-color: #0d0d0d;
+    color: var(--color-background);
+    padding: 1.5rem;
+    margin: 2rem 0;
+
+    border: 2px solid var(--color-accent-crimson);
+    border-radius: 6px;
+
+    box-shadow:
+        0 8px 15px rgba(0, 0, 0, 0.8),
+        0 0 15px rgba(139, 0, 0, 0.7);
 }
 
 .antagonist-card .profile-header {
@@ -17,30 +18,37 @@ border-right: 8px solid var(--color-border-dark);
     align-items: center;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
-    /* Dark Crimson separator */
     border-bottom: 2px solid var(--color-accent-crimson);
-}
-
-
-.antagonist-card .character-portrait {
-    /* Portrait border is now Dark Red/Wine */
-    border: 3px solid var(--color-border-dark);
 }
 
 .antagonist-card .header-info {
     flex-grow: 1;
-    /* Allows the info section to take up space */
+}
+
+.antagonist-card .header-info h2 {
+    color: var(--color-accent-gold);
+    font-size: 2rem;
+    margin: 0;
+    text-shadow: 0 0 5px rgba(192, 178, 131, 0.8);
 }
 
 .antagonist-card .antagonist-title {
+    color: var(--color-accent-crimson);
+    font-weight: 700;
     font-style: italic;
-    color: var(--color-accent-gold);
-    /* Gold title for prominence */
-    margin: 0.2rem 0;
+    margin: 0.2rem 0 0 0;
+}
+
+.antagonist-card .character-portrait {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--color-border-dark);
 }
 
 .antagonist-card .lore-link {
-    color: var(--color-accent-crimson);
+    color: var(--color-accent-gold);
     text-decoration: none;
     font-family: var(--font-primary);
     text-align: right;
@@ -49,45 +57,34 @@ border-right: 8px solid var(--color-border-dark);
     gap: 0.5rem;
     font-size: 0.9rem;
     font-weight: 700;
-    /* Style as a red link */
-    border: 1px solid var(--color-accent-crimson);
+    border: 1px solid var(--color-accent-gold);
     padding: 0.5rem;
     border-radius: 4px;
     transition: background-color 0.3s;
 }
 
 .antagonist-card .lore-link:hover {
-    background-color: rgba(139, 0, 0, 0.1);
+    background-color: rgba(192, 178, 131, 0.1);
 }
 
-/* Antagonist Status colors */
-.status-antagonist.status-defeated {
-    background-color: #c0c0c0;
-    /* Gray/Stone for Defeated */
-    color: var(--color-text-primary);
-    text-decoration: line-through;
-}
-
-.status-antagonist.status-sealed {
-    background-color: #37536f;
-    /* Blue/Binding color */
-    color: var(--color-background);
-}
-
-.antagonist-card.defeated-look .character-portrait {
-    /* 1. Desaturate the image (Grayscale) */
-    filter: grayscale(100%);
-    /* 2. Optional: Reduce opacity to show the character's fade */
-    opacity: 0.6;
-    /* 3. Optional: Add a subtle red drop shadow (the "red hue") */
-    box-shadow: 0 0 10px 5px var(--color-accent-crimson);
-    /* Ensure the transition is smooth */
-    transition: filter 0.5s, opacity 0.5s, box-shadow 0.5s;
+.antagonist-card.defeated-look {
+    opacity: 0.8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
 
 .antagonist-card.defeated-look h2 {
-    /* Apply strikethrough to the name */
     text-decoration: line-through;
-    color: var(--color-border-dark);
-    /* Faded color */
+    text-shadow: none;
+}
+
+.antagonist-card.defeated-look .status-tag {
+    text-decoration: line-through;
+}
+
+.antagonist-card.defeated-look .character-portrait {
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition:
+        filter 0.5s,
+        opacity 0.5s;
 }
