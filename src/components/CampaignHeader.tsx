@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './CampaignHeader.css';
 
 interface CampaignHeaderProps {
@@ -15,10 +16,10 @@ const CampaignHeader: React.FC<CampaignHeaderProps> = ({
             <h1 className="campaign-title">{campaignTitle}</h1>
             <p className="campaign-subtitle">{subtitle}</p>
             <nav className="header-nav">
-                <a href="/home">Home</a>
-                <a href="/world">The World</a>
-                <a href="/characters">Characters</a>
-                <a href="/lore">Lore</a>
+                <Link to="/home">Home</Link>
+                <Link to="/world">The World</Link>
+                <Link to="/characters">Characters</Link>
+                { /* <Link to="/lore">Lore</Link> */}
             </nav>
         </header>
     );

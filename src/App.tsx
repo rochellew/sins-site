@@ -3,6 +3,8 @@ import CampaignFooter from './components/CampaignFooter';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import WorldPage from './pages/WorldPage';
+import CharactersPage from './pages/CharactersPage';
+import CharacterDetailPage from './pages/CharacterDetailPage';
 
 function App() {
     return (
@@ -17,6 +19,8 @@ function App() {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/home" element={<HomePage />} />
                     <Route path="/world" element={<WorldPage />} />
+                    <Route path="/characters/:characterId" element={<CharacterDetailPage />} />
+                    <Route path="/characters" element={<CharactersPage />} />
 
                     <Route
                         path="*"

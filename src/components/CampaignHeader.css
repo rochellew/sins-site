@@ -27,7 +27,8 @@
     font-style: italic;
     font-size: 1.3rem;
     margin: 0.5rem 0 1.5rem 0;
-    color: var(--color-text-primary); /* Dark text */
+    color: var(--color-text-primary);
+    /* Dark text */
 }
 
 .header-nav {
@@ -35,7 +36,8 @@
 }
 
 .header-nav a {
-    color: var(--color-accent-crimson); /* Crimson links */
+    color: var(--color-accent-crimson);
+    /* Crimson links */
     text-decoration: none;
     margin: 0 1.8rem;
     font-family: var(--font-primary);
@@ -44,9 +46,12 @@
     transition:
         color 0.3s,
         text-shadow 0.3s;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
 }
 
 .header-nav a:hover {
-    color: var(--color-accent-gold); /* Gold on hover */
-    text-shadow: 0 0 5px var(--color-border-dark);
+    color: var(--color-accent-gold);
+    background-color: var(--color-accent-crimson);
+    border: 1px solid var(--color-accent-gold)
 }

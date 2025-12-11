@@ -73,13 +73,13 @@
 }
 
 .antagonist-card.defeated-look h2 {
-    text-decoration: line-through;
+    /* text-decoration: line-through; */
     text-shadow: none;
 }
 
-.antagonist-card.defeated-look .status-tag {
+/* .antagonist-card.defeated-look .status-tag {
     text-decoration: line-through;
-}
+} */
 
 .antagonist-card.defeated-look .character-portrait {
     filter: grayscale(100%);

@@ -1,10 +1,15 @@
 import React from 'react';
+import { useEffect } from 'react';
 import TabbedContent from '../components/TabbedContent';
 import ContentLayout from '../components/ContentLayout';
 import ContentCard from '../components/ContentCard';
 import { loreTabs } from '../data/content.tsx'; // We'll use this centralized data
 
 const WorldPage: React.FC = () => {
+    useEffect(() => {
+        document.title = 'Sins - The World';
+    });
+
     return (
         <main>
             <h1>The World of Terra Sancta: Lore Index</h1>

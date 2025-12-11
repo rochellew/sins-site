@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './CharacterProfile.css';
 
 export interface CharacterProfileProps {
@@ -6,79 +7,57 @@ export interface CharacterProfileProps {
     name: string;
     race: string;
     classRole: string;
-    level: number;
     status: 'Active' | 'Missing' | 'Deceased';
     description: string;
     imageSrc: string;
-    keyStats: {
-        hp: number;
-        ac: number;
-        passivePerception: number;
-    };
 }
 
 const CharacterProfile: React.FC<CharacterProfileProps> = ({
+    id,
     name,
     race,
     classRole,
-    level,
     status,
     description,
     imageSrc,
-    keyStats,
 }) => {
     const statusClass = status.toLowerCase();
 
+    const truncatedDescription = description.length > 75 ? description.substring(0, 75) + '...' : description;
+
     return (
-        <article className={`character-profile ${statusClass}`}>
-            <div className="profile-header">
-                <img
-                    src={imageSrc}
-                    alt={`Portrait of ${name}`}
-                    className="character-portrait"
-                />
-                <div className="header-info">
-                    <h2>{name}</h2>
-                    <p className={`status-tag status-${statusClass}`}>
-                        {status}
+        <Link to={`/characters/${id}`} className="character-card-link">
+            <article className={`character-profile ${statusClass}`}>
+                <div className="profile-header">
+                    <img
+                        src={imageSrc}
+                        alt={`Portrait of ${name}`}
+                        className="character-portrait"
+                    />
+                    <div className="header-info">
+                        <h2>{name}</h2>
+                        <p className={`status-tag status-${statusClass}`}>
+                            {status}
+                        </p>
+                    </div>
+                </div>
+
+                <div className="profile-details">
+                    <p>
+                        <strong>Race:</strong> {race}
                     </p>
-                </div>
-            </div>
+                    <p>
+                        <strong>Class:</strong> {classRole}
+                    </p>
 
-            <div className="profile-details">
-                <p>
-                    <strong>Race:</strong> {race}
-                </p>
-                <p>
-                    <strong>Class:</strong> {classRole}
-                </p>
-                <p>
-                    <strong>Level:</strong> {level}
-                </p>
-            </div>
+                </div>
 
-            <div className="key-stats">
-                <div className="stat-box">
-                    <span className="stat-value">{keyStats.hp}</span>
-                    <span className="stat-label">HP</span>
+                <div className="profile-description">
+                    <h4>Background</h4>
+                    <p>{truncatedDescription}</p>
                 </div>
-                <div className="stat-box">
-                    <span className="stat-value">{keyStats.ac}</span>
-                    <span className="stat-label">AC</span>
-                </div>
-                <div className="stat-box">
-                    <span className="stat-value">
-                        {keyStats.passivePerception}
-                    </span>
-                    <span className="stat-label">Passive Perception</span>
-                </div>
-            </div>
-
-            <div className="profile-description">
-                <h4>Background</h4>
-                <p>{description}</p>
-            </div>
-        </article>
+            </article>
+        </Link>
     );
 };
 
