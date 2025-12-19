@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './NonPlayerCard.css';
 
 export interface NonPlayerCardProps {
@@ -11,6 +12,7 @@ export interface NonPlayerCardProps {
 }
 
 const NonPlayerCard: React.FC<NonPlayerCardProps> = ({
+    id,
     name,
     role,
     status,
@@ -20,26 +22,28 @@ const NonPlayerCard: React.FC<NonPlayerCardProps> = ({
     const statusClass = status.toLowerCase();
 
     return (
-        <article className="non-player-card">
-            <div className="profile-header">
-                <img
-                    src={imageSrc}
-                    alt={`Portrait of ${name}`}
-                    className="character-portrait"
-                />
-                <div className="header-info">
-                    <h2>{name}</h2>
-                    <p className={`status-tag status-${statusClass}`}>
-                        {status}
-                    </p>
-                    <p className="npc-role">{role}</p>
+        <Link to={`/npcs/${id}`} className="character-card-link">
+            <article className="non-player-card">
+                <div className="profile-header">
+                    <img
+                        src={imageSrc}
+                        alt={`Portrait of ${name}`}
+                        className="character-portrait"
+                    />
+                    <div className="header-info">
+                        <h2>{name}</h2>
+                        <p className={`status-tag status-${statusClass}`}>
+                            {status}
+                        </p>
+                        <p className="npc-role">{role}</p>
+                    </div>
                 </div>
-            </div>
 
-            <div className="profile-description">
-                <p>{description}</p>
-            </div>
-        </article>
+                <div className="profile-description">
+                    <p>{description}</p>
+                </div>
+            </article>
+        </Link>
     );
 };
 

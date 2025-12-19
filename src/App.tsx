@@ -5,6 +5,8 @@ import HomePage from './pages/HomePage';
 import WorldPage from './pages/WorldPage';
 import CharactersPage from './pages/CharactersPage';
 import CharacterDetailPage from './pages/CharacterDetailPage';
+import AntagonistDetailPage from './pages/AntagonistDetailPage';
+import NPCDetailPage from './pages/NPCDetailPage';
 
 function App() {
     return (
@@ -19,7 +21,9 @@ function App() {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/home" element={<HomePage />} />
                     <Route path="/world" element={<WorldPage />} />
-                    <Route path="/characters/:characterId" element={<CharacterDetailPage />} />
+                    <Route path="/antagonists/:antagonistId" element={<AntagonistDetailPage />} />
+                    <Route path="/players/:characterId" element={<CharacterDetailPage />} />
+                    <Route path="/npcs/:npcId" element={<NPCDetailPage />} />
                     <Route path="/characters" element={<CharactersPage />} />
 
                     <Route

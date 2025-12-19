@@ -26,7 +26,7 @@ const CharacterProfile: React.FC<CharacterProfileProps> = ({
     const truncatedDescription = description.length > 75 ? description.substring(0, 75) + '...' : description;
 
     return (
-        <Link to={`/characters/${id}`} className="character-card-link">
+        <Link to={`/players/${id}`} className="character-card-link">
             <article className={`character-profile ${statusClass}`}>
                 <div className="profile-header">
                     <img
