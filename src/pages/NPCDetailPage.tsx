@@ -1,11 +1,8 @@
-import {useEffect} from 'react';
-import {useParams, Link} from 'react-router-dom';
-import { NPC_DATA } from '../data/npcData';
+import CharacterDetail from '../components/CharacterDetail';
+import { CharacterType } from '../types/character';
 
 const NPCDetailPage = () => {
-    return (
-        <h1>NPC</h1>
-    );
+    return <CharacterDetail characterType={CharacterType.NPC} />;
 };
 
 export default NPCDetailPage;
