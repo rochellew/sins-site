@@ -28,12 +28,14 @@ export interface AntagonistCharacter extends BaseCharacter {
 // Union type for all character types
 export type Character = PlayerCharacter | NonPlayerCharacter | AntagonistCharacter;
 
-// Character type enum
-export enum CharacterType {
-    PLAYER = 'player',
-    NPC = 'npc',
-    ANTAGONIST = 'antagonist'
-}
+// Character type constants
+export const CharacterType = {
+    PLAYER: 'player',
+    NPC: 'npc',
+    ANTAGONIST: 'antagonist'
+} as const;
+
+export type CharacterType = typeof CharacterType[keyof typeof CharacterType];
 
 // Type guards
 export const isPlayerCharacter = (character: Character): character is PlayerCharacter => {
