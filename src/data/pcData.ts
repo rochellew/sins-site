@@ -27,6 +27,8 @@ export const PC_DATA: PCDataExtended[] = [
         imageSrc: '/images/lucien.png',
         description:
             'A nobleman cursed with dhampirism by the ill deeds of his father, Lucien has been banished to Terra Sancta; during his time in the Domain, though, he has made valuable connections with the party and revealed much of his nature to them.',
+        artistName: "theshybard",
+        artistLink: "https://www.instagram.com/theshybard/"
     },
     {
         id: 'mighty',
@@ -41,12 +43,14 @@ export const PC_DATA: PCDataExtended[] = [
     {
         id: 'umbra',
         name: 'Umbra',
-        race: 'Kenku',
+        race: 'Aarakocra',
         classRole: 'Twilight Domain Cleric',
         status: 'Active' as const,
         imageSrc: '/images/umbra.png',
         description:
-            'A well-read cleric from a sisterhood worhipping Selune, the Goddess of the Moon. Umbra has found herself in Terra Sancta and has had to use her intellect to adjust to a world quite different from her own.'
+            'A well-read cleric from a sisterhood worhipping Selune, the Goddess of the Moon. Umbra has found herself in Terra Sancta and has had to use her intellect to adjust to a world quite different from her own.',
+        artistName: "theshybard",
+        artistLink: "https://www.instagram.com/theshybard/"
     },
     {
         id: 'gornak',
@@ -56,6 +60,8 @@ export const PC_DATA: PCDataExtended[] = [
         status: 'Active' as const,
         imageSrc: '/images/gornak.png',
         description:
-            'Being a brewmaster and merchant by trade, Gornak has friends wherever he goes. A latecomer to the party, he has heard of their exploits and, eager to prove himself, has done so with flying colors thus far.'
+            'Being a brewmaster and merchant by trade, Gornak has friends wherever he goes. A latecomer to the party, he has heard of their exploits and, eager to prove himself, has done so with flying colors thus far.',
+        artistName: "theshybard",
+        artistLink: "https://www.instagram.com/theshybard/"
     },
 ];
