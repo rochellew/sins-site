@@ -38,4 +38,24 @@ export const PC_DATA: PCDataExtended[] = [
         description:
             'A homunculus created through unknown rite by the alchemist Dominic Wormwood, Mighty has formed a new family with the party while saving his homonculi siblings from danger, oftentimes self-imposed.',
     },
+    {
+        id: 'umbra',
+        name: 'Umbra',
+        race: 'Kenku',
+        classRole: 'Twilight Domain Cleric',
+        status: 'Active' as const,
+        imageSrc: '/images/umbra.png',
+        description:
+            'A well-read cleric from a sisterhood worhipping Selune, the Goddess of the Moon. Umbra has found herself in Terra Sancta and has had to use her intellect to adjust to a world quite different from her own.'
+    },
+    {
+        id: 'gornak',
+        name: 'Gornak',
+        race: 'Goliath',
+        classRole: 'Drunken Master Monk',
+        status: 'Active' as const,
+        imageSrc: '/images/gornak.png',
+        description:
+            'Being a brewmaster and merchant by trade, Gornak has friends wherever he goes. A latecomer to the party, he has heard of their exploits and, eager to prove himself, has done so with flying colors thus far.'
+    },
 ];
